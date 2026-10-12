@@ -79,7 +79,7 @@ h3.hero-text {
 }
 .offering-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 320px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 320px));
     gap: 24px;
 }
 .offering-card {
@@ -108,6 +108,10 @@ img.card-content {
     flex-shrink: 0;
     object-fit: cover;
     margin-bottom: 12px;
+}
+
+.main-footer {
+    border-top: 1px solid #dddddd;
 }
 
 @media (max-width: 800px) {
