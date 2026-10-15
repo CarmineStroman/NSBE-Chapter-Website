@@ -45,7 +45,19 @@ a {
     gap: 30px;
     margin-right: 50px;
 }
+.nav-menu > a:first-child {
+    margin-right: auto;
+    margin-left: 40px;
+}
+.nav-logo {
+    display: block;
+    height: 40px;
+    width: auto;
+}
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #151515;
     color: #ffffff;
     padding: 16px 0;
