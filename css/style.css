@@ -84,23 +84,23 @@ main {
     padding: 40px 8%;
     border-bottom: 1px solid #dddddd;
 }
-.hero-text {
+.hero__text {
     flex: 1;
 }
-.hero-text h1 {
+.hero__title {
     font-size: 3rem;
     margin: 0 0 16px;
 }
-.hero-text h3 {
+.hero__subtitle {
     font-size: 1.25rem;
     font-weight: normal;
     margin: 0;
     color: #4B4B50
 }
-.hero-media {
+.hero__media {
     flex: 0 0 240px;
 }
-.logo {
+.hero__logo {
     display: block;
     width: 100%;
     height: auto;
