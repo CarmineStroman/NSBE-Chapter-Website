@@ -229,10 +229,8 @@ main {
     color: #c6c6c6;
     text-decoration: none;
 }
-.footer__link a:hover,
-.footer__link a:focus-visible,
-.footer__bottom a:hover,
-.footer__bottom a:focus-visible {
+.footer__link:hover,
+.footer__link:focus-visible {
     color: #ffffff;
     text-decoration: underline;
 }
