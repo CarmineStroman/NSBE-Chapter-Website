@@ -8,28 +8,42 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-menu">
-            <a href="../index.html"><img src="../media/NSBE-logo.png" alt="NSBE logo" class="nav-logo"></a>
-            <a href="../index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="news.html">News</a>
-            <a href="membership.html">Membership</a>
-            <a href="partners.html">Partners</a>
-            <a href="contact.html">Contact Us</a>
+    <nav class="nav" aria-label="Main navigation">
+        <div class="nav__menu">
+            <a class="nav__link nav__brand" href="../index.html"><img src="../media/NSBE-logo.png" alt="NSBE logo" class="nav__logo"></a>
+            <a class="nav__link" href="../index.html">Home</a>
+            <a class="nav__link" href="about.html">About Us</a>
+            <a class="nav__link" href="news.html">News</a>
+            <a class="nav__link" href="membership.html">Membership</a>
+            <a class="nav__link" href="partners.html">Partners</a>
+            <a class="nav__link" href="contact.html">Contact Us</a>
         </div>
     </nav>
     <header class="hero">
-        <div class="hero-text">
-            <h1>Find your path.<br>Build your future.</h1>
-            <p>Whether you're just getting involved or preparing to represent NSBE at a conference, there's a path to participate, grow, and contribute.</p>
-            <div class="membership-actions">
-                <a class="button button-primary" href="#tiers">Explore membership tiers</a>
-                <a class="button button-secondary" href="#faq">Understand the requirements</a>
+        <div class="hero__text">
+            <h1 class="hero__title">Find your path.<br>Build your future.</h1>
+            <p class="hero__lead">Whether you're just getting involved or preparing to represent NSBE at a conference, there's a path to participate, grow, and contribute.</p>
+            <div class="hero__actions">
+                <a class="button button--primary" href="#tiers">Explore membership tiers</a>
+                <a class="button button--secondary" href="#faq">Understand the requirements</a>
             </div>
-            <aside class="membership-roadmap">
-                <h2>Your NSBE Membership Roadmap</h2>
-                <p>Start with our chapter, grow your access, and earn consideration for funding.</p>
+            <aside class="roadmap hero__roadmap" aria-labelledby="roadmap-title">
+                <h2 class="roadmap__title">Your NSBE Membership Roadmap</h2>
+                <p class="roadmap__intro">Start with our chapter, grow your access, and earn consideration for funding.</p>
+                <ol class="roadmap__steps" role="list">
+                    <li class="roadmap__step">
+                        <strong class="roadmap__name">UA Chapter Member</strong>
+                        <span class="roadmap__desc">Join the local community</span>
+                    </li>
+                    <li class="roadmap__step">
+                        <strong class="roadmap__name">National NSBE Member</strong>
+                        <span class="roadmap__desc">Unlock national membership benefits</span>
+                    </li>
+                    <li class="roadmap__step">
+                        <strong class="roadmap__name">Convention Funding</strong>
+                        <span class="roadmap__desc">Competitive, contribution-based support</span>
+                    </li>
+                </ol>
             </aside>
         </div>
     </header>
