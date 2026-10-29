@@ -177,10 +177,193 @@ main {
         width: 100%;
     }
 }
+
 .mission {
     max-width: 800px;
     margin-bottom: 48px;
 }
+
+.tiers {
+    margin-bottom: 48px;
+}
+.tiers__title {
+    margin: 0 0 24px;
+}
+.tiers__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+.tier-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    background-color: #151515;
+    color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.tier-card__header {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 12px;
+    min-height: 260px;
+    padding: 24px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+.tier-card__details {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 32px;
+}
+.tier-card__section-title {
+    text-transform: uppercase;
+    margin: 0 0 8px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+}
+.tier-card__section-description {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.tier-card__more {
+    margin-top: 12px;
+    padding-top: 14px;
+    border-top: 1px solid #444444;
+}
+.tier-card__more summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700px;
+    list-style: none;
+}
+.tier-card__more p {
+    margin: 12px 0 0;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.6;
+}
+.tier-card--chapter .tier-card__header {
+    background-color: #176b43;
+    color: #ffffff;
+}
+.tier-card--national .tier-card__header {
+    background-color: #e3b83f;
+    color: #ffffff;
+}
+.tier-card--funding .tier-card__header {
+    background-color: #b83a3a;
+    color: #ffffff;
+}
+.tier-card__label {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+.tier-card__title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+.tier-card__text {
+    margin: 0;
+}
+.tier-card__pill {
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #151515;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.tier-card__action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    box-sizing: border-box;
+    margin: 0 10px 10px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: filter 0.2 ease;
+}
+.tier-card__action:hover {
+    filter: brightness(1.12);
+}
+.tier-card__action:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+.tier-card__action--chapter {
+    background-color: #176b43;
+    color: #ffffff;
+}
+.tier-card__action--national {
+    background-color: #e3b83f;
+    color: #ffffff;
+}
+.tier-card__action--funding {
+    background-color: #b83a3a;
+    color: #ffffff;
+}
+.tier-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tier-card__list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.tier-card__list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+.tier-card__more summary::-webkit-details-marker {
+    display: none;
+}
+.tier-card__more summary::after {
+    content: "+";
+    font-size: 18px;
+}
+.tier-card__more[open] summary::after {
+    content: "-";
+}
+@media (max-width: 800px) {
+    .tiers__list {
+        grid-template-columns: 1fr;
+    }
+}
+
 .offerings {
     margin-bottom: 48px;
 }
@@ -220,6 +403,11 @@ main {
     object-fit: cover;
     margin-bottom: 12px;
 }
+@media (max-width: 800px) {
+    .offerings__list {
+        grid-template-columns: 1fr;
+    }
+}
 
 .get-involved {
     text-align: center;
@@ -245,12 +433,6 @@ main {
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-}
-
-@media (max-width: 800px) {
-    .offerings__list {
-        grid-template-columns: 1fr;
-    }
 }
 
 .footer {
