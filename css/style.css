@@ -217,6 +217,7 @@ main {
 .tier-card__details {
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: 24px;
     gap: 32px;
 }
@@ -299,7 +300,7 @@ main {
     gap: 8px;
     width: auto;
     box-sizing: border-box;
-    margin: 0 10px 10px;
+    margin: auto 10px 10px;
     padding: 14px 18px;
     border: 0;
     border-radius: 6px;
@@ -307,7 +308,7 @@ main {
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    transition: filter 0.2 ease;
+    transition: filter 0.2s ease;
 }
 .tier-card__action:hover {
     filter: brightness(1.12);
@@ -357,6 +358,9 @@ main {
 }
 .tier-card__more[open] summary::after {
     content: "-";
+}
+.tier-card__more:first-of-type {
+    margin-top: auto;
 }
 @media (max-width: 800px) {
     .tiers__list {
